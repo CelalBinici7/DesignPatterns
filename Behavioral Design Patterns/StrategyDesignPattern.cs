@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
 {
 
     private IAttackStrategy m_AttackStrategy;
-    private GameObject _enemy;
+   
     public void setAttackStrategy(IAttackStrategy strategy)
     {
        m_AttackStrategy= strategy;
@@ -61,6 +61,6 @@ public class Enemy : MonoBehaviour
 
     public void PerformAttack()
     {
-        m_AttackStrategy.Attack(_enemy);
+        m_AttackStrategy.Attack(gameObject);
     }
 }
