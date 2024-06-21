@@ -61,6 +61,9 @@ public class Enemy : MonoBehaviour
 
     public void PerformAttack()
     {
-        m_AttackStrategy.Attack(gameObject);
+        if (m_AttackStrategy != null)
+        {
+            m_AttackStrategy.Attack(gameObject);
+        }
     }
 }
